@@ -34,7 +34,7 @@ public class TicketList {
     //remove a ticket reserved to the list
     public Ticket removeTicket(int id){
         //if the list is empty
-        if(head==null){
+        if(isEmpty()){
             return null;
         }
         //Otherwise, traverse the list
@@ -74,7 +74,7 @@ public class TicketList {
         while(current!=null){
             //check if its id equal
             if(current.data.getTicketId()==id){
-                return current.data;
+                return  current.data;
             }
             //if not found move next
             current=current.next;
@@ -84,7 +84,7 @@ public class TicketList {
         return null;
     }
     //print all tickets currently in the list
-    public void printlist(){
+    public void printList(){
         //check if is empty
         if(isEmpty()){
             System.out.println("There is no tickets in the list");
@@ -94,7 +94,7 @@ public class TicketList {
         //start from head
         TicketNode temp=head;
         while(temp!=null){
-            System.out.print(temp.data.getTicketId()+" ");
+            System.out.println(temp.data.getTicketId());
             //move to the next ticket
             temp=temp.next;
         }

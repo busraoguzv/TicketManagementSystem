@@ -49,4 +49,8 @@ public class Ticket {
     public void setShowTime(String showTime){
         this.showTime=showTime;
     }
+    //
+    public String toString(){
+        return String.format("{ID: %d | Customer Name: %s | Movie Name: %s | Seat Number: %s | Show Time: %s}",ticketId,customerName,movieName,seatNumber,showTime);
+    }
 }
