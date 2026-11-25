@@ -1,4 +1,7 @@
 public class SeatQueue {
+    public void print() {
+    }
+
     private class SeatRequestNode{
         SeatRequest data;
         SeatRequestNode next;
@@ -42,7 +45,7 @@ public class SeatQueue {
     public int size(){
         return size;
     }
-    public void PrintQueue(){
+    public void printQueue(){
         SeatRequestNode temp=front;
         while(temp!=null){
             System.out.print(temp.data+" ");

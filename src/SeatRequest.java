@@ -34,6 +34,9 @@ public class SeatRequest {
     }
     //toString method for printing the customer's request
     public String toString(){
-        return String.format("{Customer Id: %d | Movie Name: %s | Request Time: %d}",customerId,movieName,requestTime);
+        long hour=requestTime/100;
+        long min=requestTime%100;
+        return String.format("\n{Customer Id: %5d | Movie Name: %-21s | Request Time: %02d:%02d}",customerId,movieName,hour,min);
+
     }
 }
